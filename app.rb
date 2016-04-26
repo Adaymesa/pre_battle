@@ -19,7 +19,14 @@ get '/arg' do
   "gdskfja;lsfkjs"
 end
 
-get '/dog' do
+get '/random-dog' do
   @name = ["Amigo", "Oscar", "Viking"].sample
+	erb(:index)
+end
+
+
+get '/named-dog' do
+  p params
+  @name = params[:name]
 	erb(:index)
 end
