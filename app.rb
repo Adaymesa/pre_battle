@@ -20,5 +20,6 @@ get '/arg' do
 end
 
 get '/dog' do
+  @name = ["Amigo", "Oscar", "Viking"].sample
 	erb(:index)
 end
