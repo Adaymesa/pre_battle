@@ -19,6 +19,19 @@ get '/arg' do
   "gdskfja;lsfkjs"
 end
 
-get '/dog' do
+get '/random-dog' do
+  @name = ["Amigo", "Oscar", "Viking"].sample
 	erb(:index)
+end
+
+
+post '/named-dog' do
+  p params
+  @name = params[:name]
+	erb(:index)
+end
+
+get '/dog-form' do
+	@name = params[:name]
+	erb(:dog_form)
 end
