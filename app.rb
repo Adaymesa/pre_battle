@@ -20,7 +20,5 @@ get '/arg' do
 end
 
 get '/dog' do
-  "<div style = 'border: 3px dashed red'>
-   <img src =https://i.ytimg.com/vi/KY4IzMcjX3Y/maxresdefault.jpg >
-  </div>"
+	erb(:index)
 end
